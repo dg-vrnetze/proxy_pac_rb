@@ -4,6 +4,17 @@
 # require 'bundler'
 # Bundler.require :default, :test, :development
 
+# temp fix for NoMethodError: undefined method `last_comment'
+# remove when fixed in Rake 11.x
+# see http://stackoverflow.com/questions/35893584/nomethoderror-undefined-method-last-comment-after-upgrading-to-rake-11
+module TempFixForRakeLastComment
+  def last_comment
+    last_description
+  end
+end
+Rake::Application.send :include, TempFixForRakeLastComment
+### end of tempfix
+
 require 'filegen'
 require 'fedux_org_stdlib/rake_tasks'
 
