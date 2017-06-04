@@ -22,8 +22,8 @@ DESC
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'addressable', '~>2.3'
-  spec.add_runtime_dependency 'activesupport', '~>4.1'
-  spec.add_runtime_dependency 'uglifier', '~> 2.7.1'
+  spec.add_runtime_dependency 'activesupport', '>=4.1', '<5.2'
+  spec.add_runtime_dependency 'uglifier', '>= 2.7.1'
   spec.add_runtime_dependency 'excon', '~> 0.45.3'
   spec.add_runtime_dependency 'contracts', '~> 0.9'
   spec.add_runtime_dependency 'thor', '~> 0.19'
