@@ -53,7 +53,7 @@ module ProxyPacRb
           # pure_funcs: nil,      # List of functions without side-effects. Can safely discard function calls when the result value is not used
           # drop_console: false,  # Drop calls to console.* functions
           # angular: false,       # Process @ngInject annotations
-          # keep_fargs: false,     # Preserve unused function arguments
+          keep_fargs: true # Preserve unused function arguments
           # keep_fnames: true     # Preserve function names
         }
       }.deep_merge options
