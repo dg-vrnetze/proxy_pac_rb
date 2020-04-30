@@ -4,7 +4,7 @@ AllCops:
     - 'tmp/**/*'
     - Gemfile
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.6
 
 Style/GuardClause:
   Enabled: false
@@ -38,7 +38,7 @@ Metrics/MethodLength:
   Max: 76
 
 Metrics/PerceivedComplexity:
-  Max: 8
+  Max: 9
 
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/MethodName:

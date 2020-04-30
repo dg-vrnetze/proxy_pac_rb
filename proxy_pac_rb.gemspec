@@ -21,12 +21,12 @@ DESC
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'addressable', '~>2.3'
-  spec.add_runtime_dependency 'activesupport', '>=4.1', '<5.2'
+  spec.add_runtime_dependency 'addressable'
+  spec.add_runtime_dependency 'activesupport', '>=4.1'
   spec.add_runtime_dependency 'uglifier', '>= 2.7.1'
-  spec.add_runtime_dependency 'excon', '~> 0.45.3'
-  spec.add_runtime_dependency 'contracts', '~> 0.9'
-  spec.add_runtime_dependency 'thor', '~> 0.19'
+  spec.add_runtime_dependency 'excon'
+  spec.add_runtime_dependency 'contracts'
+  spec.add_runtime_dependency 'thor'
 
-  spec.required_ruby_version = '~> 2.3'
+  spec.required_ruby_version = '>= 2.3'
 end

@@ -13,15 +13,15 @@ group :debug do
 end
 
 group :development, :test do
-  gem 'middleman', '~> 4.1', require: false
-  gem 'aruba', '~>0.14.2', require: false
+  gem 'middleman', require: false
+  gem 'aruba', require: false
   gem 'awesome_print', require: 'ap'
-  gem 'bundler', '~> 1.3', require: false
+  gem 'bundler', require: false
   gem 'command_exec', require: false
   gem 'coveralls', require: false
   gem 'cucumber', require: false
   gem 'erubis'
-  gem 'fedux_org-stdlib', '~>0.11.17', require: false
+  gem 'fedux_org-stdlib', require: false
   gem 'filegen'
   gem 'foreman', require: false
   gem 'fuubar', require: false
@@ -49,11 +49,18 @@ group :profile do
 end
 
 group :runtimes do
-  group :therubyracer do
-    gem 'therubyracer', require: 'v8'
+  # mini_racer & therubyracer can't sit in the same gemfile
+  # uncomment the needed one and comment the other
+  #
+  group :mini_racer do
+    gem 'mini_racer', require: 'mini_racer'
   end
 
+  # group :therubyracer do
+  #   gem 'therubyracer', require: 'v8'
+  # end
+
   group :therubyrhino do
-    gem 'therubyrhino', require: 'rhino'
+    gem 'therubyrhino', require: 'rhino', platform: :jruby
   end
 end

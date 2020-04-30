@@ -2,6 +2,7 @@
 module ProxyPacRb
   # JavaScript Runtimes
   module Runtimes
+    MiniRacer = MiniRacerRuntime.new
     RubyRacer = RubyRacerRuntime.new
     RubyRhino = RubyRhinoRuntime.new
 
@@ -33,6 +34,7 @@ module ProxyPacRb
 
       def runtimes
         @runtimes ||= [
+          MiniRacer,
           RubyRacer,
           RubyRhino
         ]

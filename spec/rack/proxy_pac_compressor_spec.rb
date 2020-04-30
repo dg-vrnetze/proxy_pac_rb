@@ -37,7 +37,7 @@ RSpec.describe ProxyPacRb::Rack::ProxyPacCompressor, type: :rack_test do
   end
 
   context 'when invalid proxy pac is given' do
-    let(:compressed_content) { %{Unexpected token: string (§$ )} }
+    let(:compressed_content) { %{Unexpected token: string (!$ )} }
 
     let(:app) do
       a = Class.new(Sinatra::Base) do
@@ -48,7 +48,7 @@ RSpec.describe ProxyPacRb::Rack::ProxyPacCompressor, type: :rack_test do
         get '/' do
           <<~EOS.chomp
           function FindProxyForURL(url, host) {
-            return $"§$ "DIRECT";
+            return $"!$ "DIRECT";
           }
           EOS
         end

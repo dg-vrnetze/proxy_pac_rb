@@ -7,7 +7,9 @@
 [![Downloads](http://img.shields.io/gem/dt/proxy_pac_rb.svg?style=flat)](http://rubygems.org/gems/proxy_pac_rb)
 
 
-`proxy_pac_rb` is a gem to compress, lint and parse [proxy auto-config](http://en.wikipedia.org/wiki/Proxy_auto-config) files. It comes with a cli program, some rack middlewares and can be used from within ruby scripts as well. `proxy_pac_rb` uses a JavaScript runtime to evaulate a proxy auto-config file the same way a browser does to determine what proxy (if any at all) should a program use to connect to a server. You must install on of the supported JavaScript runtimes: [therubyracer](https://rubygems.org/gems/therubyracer) or [therubyrhino](https://rubygems.org/gems/therubyrhino/).
+`proxy_pac_rb` is a gem to compress, lint and parse [proxy auto-config](http://en.wikipedia.org/wiki/Proxy_auto-config
+) files. It comes with a cli program, some rack middlewares and can be used from within ruby scripts as well
+. `proxy_pac_rb` uses a JavaScript runtime to evaulate a proxy auto-config file the same way a browser does to determine what proxy (if any at all) should a program use to connect to a server. You must install on of the supported JavaScript runtimes: [miniracer](https://github.com/rubyjs/mini_racer), [therubyracer](https://rubygems.org/gems/therubyracer) or [therubyrhino](https://rubygems.org/gems/therubyrhino/).
 
 Big thanks to [sstephenson](https://github.com/sstephenson)'s [execjs](https://github.com/sstephenson/execjs) for the
 runtime wrapper code and to
@@ -35,6 +37,7 @@ After installing the `proxy_pac_rb` gem you must install a JavaScript runtime. C
 
 * [therubyracer](https://rubygems.org/gems/therubyracer) Google V8 embedded within Ruby
 * [therubyrhino](https://rubygems.org/gems/therubyrhino/) Mozilla Rhino embedded within JRuby
+* [miniracer](https://github.com/rubyjs/mini_racer) Minimal, modern embedded V8 for Ruby
 
 ## Usage
 
